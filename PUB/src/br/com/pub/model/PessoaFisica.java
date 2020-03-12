@@ -6,18 +6,19 @@ import javax.persistence.PrimaryKeyJoinColumn;
 @Entity
 @PrimaryKeyJoinColumn(name="id")
 public class PessoaFisica extends Cliente{
-	private int CPF;
-	private int RG;
-public int getCPF() {
-	return CPF;
-}
-public void setCPF(int cPF) {
-	CPF = cPF;
-}
-public int getRG() {
-	return RG;
-}
-public void setRG(int rG) {
-	RG = rG;
-}
+	private int cpf;
+	private int rg;
+	public int getCpf() {
+		return cpf;
+	}
+	public void setCpf(int cpf) {
+		this.cpf = cpf;
+	}
+	public int getRg() {
+		return rg;
+	}
+	public void setRg(int rg) {
+		this.rg = rg;
+	}
+
 }

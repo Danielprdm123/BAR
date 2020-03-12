@@ -14,10 +14,10 @@
 			<h:inputText value="#{pessoaJuridicaBean.pessoaJ.nome}" required="true" />
 
 			<h:outputLabel value="CNPJ :" />
-			<h:inputText value="#{pessoaJuridicaBean.pessoaJ.CNPJ}" required="true" />
+			<h:inputText value="#{pessoaJuridicaBean.pessoaJ.cnpj}" required="true" />
 
 			<h:outputLabel value="IE :" />
-			<h:inputText value="#{pessoaJuridicaBean.pessoaJ.IE}" required="true" />
+			<h:inputText value="#{pessoaJuridicaBean.pessoaJ.ie}" required="true" />
 
 			<h:outputLabel value="Telefone :" />
 			<h:inputText value="#{pessoaJuridicaBean.pessoaJ.telefone}" required="true" />
@@ -27,7 +27,6 @@
 
 			<h:commandButton action="#{pessoaJuridicaBean.addPessoaJudica()}"
 				value="Salvar" />
-			<h:messages showDetail="true" showSummary="false" />
 		</h:panelGrid>
 	</h:form>
 </h:body>

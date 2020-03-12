@@ -1,12 +1,14 @@
 package br.com.pub.controller;
 
 import java.io.Serializable;
+import java.util.List;
 
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 import javax.faces.context.FacesContext;
 import br.com.pub.jpaUtil.GenericDAO;
+import br.com.pub.model.PessoaFisica;
 import br.com.pub.model.PessoaJuridica;
 
 @SuppressWarnings("deprecation")
@@ -26,17 +28,20 @@ public class PessoaJuridicaController implements Serializable {
 		this.pessoaJ = pessoaJ;
 	}
 
-	public String limparUsuario() {
-		pessoaJ = new PessoaJuridica();
-		return "";
-	}
 
 	public String addPessoaJudica() {
 		pessoaJDAO.novo(pessoaJ);
-		FacesContext.getCurrentInstance().addMessage("msg: 0k!", new FacesMessage("Salvo com sucesso"));
-		FacesContext.getCurrentInstance().getExternalContext().getFlash().setKeepMessages(true);
-		limparUsuario();
-		return " ";
+		FacesContext.getCurrentInstance().addMessage("msg: 0k!", new FacesMessage("Salvo com sucesso"));		
+		return "listPessoaJuridica";
+	}
+public List<PessoaJuridica> listarPessoaJ(){
+		
+		return pessoaJDAO.listarTodos(PessoaJuridica.class);
+	}
+	
+	public String delProduto(){
+		pessoaJDAO.deletar(pessoaJ);
+		return "sucesso";
 	}
 
 }
