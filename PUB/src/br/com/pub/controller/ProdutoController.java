@@ -28,6 +28,7 @@ public class ProdutoController implements Serializable{
 	public String addProduto(){
 		produtoDAO.novo(produto);
 		FacesContext.getCurrentInstance().addMessage("msg: 0k!",new FacesMessage("Salvo com sucesso"));
+		limparDados();
 		return "listProdutos";
 	}
 	public List<Produto> listarProdutos(){
@@ -35,9 +36,13 @@ public class ProdutoController implements Serializable{
 		return produtoDAO.listarTodos(Produto.class);
 	}
 	
-	public String delProduto(){
+	public String delProduto(Produto produto){
 		produtoDAO.deletar(produto);
-		return "sucesso";
+		return "";
+	}
+	public String limparDados() {
+		Produto produto = new Produto();
+		return "";
 	}
 	
 }

@@ -3,14 +3,13 @@
       xmlns:ui="http://java.sun.com/jsf/facelets"
       xmlns:f="http://java.sun.com/jsf/core"
       xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:p="http://primefaces.org/ui"
-      > 
+      xmlns:p="http://primefaces.org/ui"> 
 	  
 <h:head>
 
 </h:head> 
 <body> 
-
+<h:form>
 <p:dataTable var="produto" value="#{ProdutoBean.listarProdutos()}">
 <h2>Lista Produtos</h2>
     <p:column headerText="Id">
@@ -31,7 +30,13 @@
      <p:column headerText="Valor">
         <h:outputText value="#{produto.valor}" />
     </p:column>
+    <p:column headerText="Ação">
+       <p:commandLink action="#{ProdutoBean.delProduto(produto)}">
+       		<h:outputText value="Excluir" />
+       </p:commandLink> 
+    </p:column>
+     
 </p:dataTable>
-
+</h:form>
 </body> 
 </html>

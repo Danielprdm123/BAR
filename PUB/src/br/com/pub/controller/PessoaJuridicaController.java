@@ -8,7 +8,6 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 import javax.faces.context.FacesContext;
 import br.com.pub.jpaUtil.GenericDAO;
-import br.com.pub.model.PessoaFisica;
 import br.com.pub.model.PessoaJuridica;
 
 @SuppressWarnings("deprecation")

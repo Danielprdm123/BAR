@@ -2,17 +2,24 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:f="http://java.sun.com/jsf/core"
-	xmlns:h="http://java.sun.com/jsf/html">
+	xmlns:h="http://java.sun.com/jsf/html"
+	>
+	
 
 <h:head>
 </h:head>
 <h:body>
+
 <h2>Pessoa Juridica</h2>
+
+
 	<h:form>
 		<h:panelGrid>
 			<h:outputLabel value="Nome :" />
 			<h:inputText value="#{pessoaJuridicaBean.pessoaJ.nome}" required="true" />
-
+			
+			
+			
 			<h:outputLabel value="CNPJ :" />
 			<h:inputText value="#{pessoaJuridicaBean.pessoaJ.cnpj}" required="true" />
 
@@ -24,10 +31,19 @@
 
 			<h:outputLabel value="Endereço :" />
 			<h:inputText value="#{pessoaJuridicaBean.pessoaJ.endereco}" required="true" />
+			
+			
+			
+			
 
 			<h:commandButton action="#{pessoaJuridicaBean.addPessoaJudica()}"
 				value="Salvar" />
 		</h:panelGrid>
 	</h:form>
+	
+	
+	
+	
 </h:body>
 </html>
+
